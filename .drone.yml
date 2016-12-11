@@ -1,4 +1,5 @@
 image: nuagebec/ubuntu
 script:
   - echo hello world
+  - python test_app.py
 
