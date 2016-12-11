@@ -1,5 +1,5 @@
 image: nuagebec/ubuntu
 script:
-  - echo hello world
+  - pip install flask
   - python test_app.py
 
