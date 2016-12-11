@@ -1,4 +1,4 @@
-image: nuagebec/ubuntu
+image: kageurufu/ubuntu-python
 script:
   - pip install flask
   - python test_app.py
