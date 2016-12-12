@@ -30,16 +30,16 @@ $ git push heroku master
 
 ## CI Server Setup  
 
-Set up drone.io on a Digital Ocean Ubuntu Droplet to automatically run tests when a new push is made to the repo. 
+Set up drone.io on a Digital Ocean Ubuntu Droplet to automatically run tests when a new push is made to the repo.   
 
-To do this we:  
-1. Install Docker on a fresh Droplet to create a container in which to run drone.io
-2. Build Docker image with Github authentication details
-3. Run drone.io
+To do this we:    
+1. Install Docker on a fresh Droplet to create a container in which to run drone.io  
+2. Build Docker image with Github authentication details  
+3. Run drone.io  
 
 **Prerequisites**:
 * Github account
-* Github oAuth token generated for 
+* Github oAuth token generated 
 
 On the CI server machine:  
 
