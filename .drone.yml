@@ -2,3 +2,8 @@ image: kageurufu/ubuntu-python
 script:
   - pip install -r requirements.txt
   - python test_app.py
+deploy:
+  heroku:
+    app: foto--app
+    when:
+      branch: master
