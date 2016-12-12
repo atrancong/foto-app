@@ -46,21 +46,23 @@ On the CI server machine:
 ```
 sh docker_install.sh
 ```
-Check Docker installed with `which docker`.
+This script installs Docker on the Droplet. You can check that Docker is installed with `which docker`.  
+
+Make a directory for drone.io:
 
 ```
 mkdir droneio
 cd droneio
 ```
 
-Copy Dockerfile and add oAuth token and secret.
+Copy Dockerfile into this directory and edit the file to add oAuth token and secret.
 
 ```
 docker build -t my_drone .
 sh run_drone.sh
 ```
 
-Run `docker ps` to check that drone.io container is running. 
+This builds and runs the container. Run `docker ps` to check that the container is running. 
 
 At http://MACHINE_IP_ADDRESS:8080/login, login with Github and activate repo.
 
