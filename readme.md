@@ -28,9 +28,43 @@ $ heroku create
 $ git push heroku master
 ```
 
-## CI Server Setup
+## CI Server Setup  
 
-1. 
+Set up drone.io on a Digital Ocean Ubuntu Droplet to automatically run tests when a new push is made to the repo. 
+
+To do this we:  
+1. Install Docker on a fresh Droplet to create a container in which to run drone.io
+2. Build Docker image with Github authentication details
+3. Run drone.io
+
+**Prerequisites**:
+* Github account
+* Github oAuth token generated for 
+
+On the CI server machine:  
+
+```
+sh docker_install.sh
+```
+Check Docker installed with `which docker`.
+
+```
+mkdir droneio
+cd droneio
+```
+
+Copy Dockerfile and add oAuth token and secret.
+
+```
+docker build -t my_drone .
+sh run_drone.sh
+```
+
+Run `docker ps` to check that drone.io container is running. 
+
+At http://MACHINE_IP_ADDRESS:8080/login, login with Github and activate repo.
+
+[More detail](https://www.digitalocean.com/community/tutorials/how-to-perform-continuous-integration-testing-with-drone-io-on-coreos-and-docker), including how to generate token in Github. 
 
 ## To do
 * Deploy automatically to Heroku from drone.io after passing tests (fix authentication issue)
