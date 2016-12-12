@@ -11,30 +11,28 @@ An example of Foto App deployed on Heroku can be found [here](https://foto--app.
 
 **Prerequisites**:  
 * Heroku account
-* [Heroku toolbelt](https://devcenter.heroku.com/articles/heroku-cli) is installed
+* [Heroku toolbelt](https://devcenter.heroku.com/articles/heroku-cli) installed
 
-**Steps**
-1. Clone  
+**Steps**  
+1. Clone app 
 ```
-git clone https://github.com/atrancong/foto-app.git 
+$ git clone https://github.com/atrancong/foto-app.git 
 ```
-
 2. Create Heroku App
 In your application folder
 ```
-heroku create
+$ heroku create
 ```
-
 3. Push to Heroku
 ```
-git push heroku master
+$ git push heroku master
 ```
 
 ## CI Server Setup
 
 1. 
 
-# To do
-* Deploy automatically to Heroku from drone.io (fix authentication issue)
+## To do
+* Deploy automatically to Heroku from drone.io after passing tests (fix authentication issue)
 
 
